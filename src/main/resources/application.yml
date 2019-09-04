@@ -1,0 +1,20 @@
+test:
+  name:luoChao
+  ip:192.168.99.10
+spring:
+  datasource:
+    type:com.alibaba.druid.pool.DruidDataSource
+    driverClassName:com.mysql.cj.jdbc.Driver
+    druid:
+      # 主库数据源
+      master:
+        url:jdbc:mysql://localhost:3306/db001?useUnicode=true&characterEncoding=utf8
+        username:root
+        password:lc111
+      # 从库数据源
+      slave:
+        # 从数据源开关/默认关闭
+        enabled:true
+        url:jdbc:mysql://localhost:3306/db002?useUnicode=true&characterEncoding=utf8
+        username:root
+        password:lc111
